@@ -27,67 +27,70 @@ public class Main {
                     break;
                 case 2:
                     System.out.println("請問要改哪隻角色呢?");
-                    String changname = scn.next();
-                    if (pp.get(0).getName().equals(changname)){
-                    System.out.println("請問要修改甚麼呢");
-                    System.out.println("修改角色名稱--1");
-                    System.out.println("修改性別--2");
-                    System.out.println("修改攻擊力--3");
-                    System.out.println("修改屬性--4");
-                    int ss = scn.nextInt();
-                    switch (ss) {
-                        case 1:
-                            System.out.println("請輸入名稱");
-                            String name3 = scn.next();
-                            for (int i = 0; i < pp.size(); i++) {
-                                if (pp.get(i).getName().equals(name3)) {
-                                    System.out.println("沒有改變");
-                                } else {
-                                    pp.get(i).setName(name3);
-                                    System.out.println("修改完畢");
-                                }
-                            }
-                            break;
-                        case 2:
-                            System.out.println("請輸入性別");
-                            String sex3 = scn.next();
-                            for (int i = 0; i < pp.size(); i++) {
-                                if (pp.get(i).getSex().equals(sex3)) {
-                                    System.out.println("沒有改變");
-                                } else {
-                                    pp.get(i).setSex(sex3);
-                                    System.out.println("修改完畢");
-                                }
-                            }
-                            break;
-                        case 3:
-                            System.out.println("請輸入攻擊力");
-                            String atk3 = scn.next();
-                            for (int i = 0; i < pp.size(); i++) {
-                                if (pp.get(i).getAtk().equals(atk3)) {
-                                    System.out.println("沒有改變");
-                                } else {
-                                    pp.get(i).setAtk(atk3);
-                                    System.out.println("修改完畢");
-                                }
-                            }
-                            break;
-                        case 4:
-                            System.out.println("請輸入名稱");
-                            String property3 = scn.next();
-                            for (int i = 0; i < pp.size(); i++) {
-                                if (pp.get(i).getProperty().equals(property3)) {
-                                    System.out.println("沒有改變");
-                                } else {
-                                    pp.get(i).setProperty(property3);
-                                    System.out.println("修改完畢");
-                                }
+
+                    for (int j =0; j<pp.size();j++) {
+                        String changname = scn.next();
+                        if (pp.get(j).getName().equals(changname)) {
+                            System.out.println("請問要修改甚麼呢");
+                            System.out.println("修改角色名稱--1");
+                            System.out.println("修改性別--2");
+                            System.out.println("修改攻擊力--3");
+                            System.out.println("修改屬性--4");
+                            int ss = scn.nextInt();
+                            switch (ss) {
+                                case 1:
+                                    System.out.println("請輸入名稱");
+                                    String name3 = scn.next();
+                                    for (int i = 0; i < pp.size(); i++) {
+                                        if (pp.get(i).getName().equals(name3)) {
+                                            System.out.println("沒有改變");
+                                        } else {
+                                            pp.get(i).setName(name3);
+                                            System.out.println("修改完畢");
+                                        }
+                                    }
+                                    break;
+                                case 2:
+                                    System.out.println("請輸入性別");
+                                    String sex3 = scn.next();
+                                    for (int i = 0; i < pp.size(); i++) {
+                                        if (pp.get(i).getSex().equals(sex3)) {
+                                            System.out.println("沒有改變");
+                                        } else {
+                                            pp.get(i).setSex(sex3);
+                                            System.out.println("修改完畢");
+                                        }
+                                    }
+                                    break;
+                                case 3:
+                                    System.out.println("請輸入攻擊力");
+                                    String atk3 = scn.next();
+                                    for (int i = 0; i < pp.size(); i++) {
+                                        if (pp.get(i).getAtk().equals(atk3)) {
+                                            System.out.println("沒有改變");
+                                        } else {
+                                            pp.get(i).setAtk(atk3);
+                                            System.out.println("修改完畢");
+                                        }
+                                    }
+                                    break;
+                                case 4:
+                                    System.out.println("請輸入名稱");
+                                    String property3 = scn.next();
+                                    for (int i = 0; i < pp.size(); i++) {
+                                        if (pp.get(i).getProperty().equals(property3)) {
+                                            System.out.println("沒有改變");
+                                        } else {
+                                            pp.get(i).setProperty(property3);
+                                            System.out.println("修改完畢");
+                                        }
+                                    }
+                                    break;
+
                             }
                             break;
 
-                    }
-                    break;
-
+                        }
                     }
                 case 3:
                     System.out.println("用角色名稱查詢--1");

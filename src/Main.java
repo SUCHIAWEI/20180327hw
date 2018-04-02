@@ -27,10 +27,10 @@ public class Main {
                     break;
                 case 2:
                     System.out.println("請問要改哪隻角色呢?");
-
                     for (int j =0; j<pp.size();j++) {
                         String changname = scn.next();
                         if (pp.get(j).getName().equals(changname)) {
+                            index = j;
                             System.out.println("請問要修改甚麼呢");
                             System.out.println("修改角色名稱--1");
                             System.out.println("修改性別--2");
@@ -41,7 +41,7 @@ public class Main {
                                 case 1:
                                     System.out.println("請輸入名稱");
                                     String name3 = scn.next();
-                                    for (int i = 0; i < pp.size(); i++) {
+                                    for (int i = 0; i < pp.size(); i++) {               //這邊就不用再做一次for迴圈了
                                         if (pp.get(i).getName().equals(name3)) {
                                             System.out.println("沒有改變");
                                         } else {
@@ -49,6 +49,7 @@ public class Main {
                                             System.out.println("修改完畢");
                                         }
                                     }
+//                                     pp.get(j).setName(name3);                        //這樣就行了，其他的以此類推
                                     break;
                                 case 2:
                                     System.out.println("請輸入性別");
